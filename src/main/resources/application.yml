@@ -1,0 +1,60 @@
+project:
+    name: '@project.artifactId@'
+    version: '@project.version@'
+    description: '@project.description@'
+info:
+    build:
+        artifact: ${project.artifactId}
+        name: "@project.build.finalName@"
+        description: '@project.description@'
+        version: '@project.version@'
+
+#Configuração do TOMCAT
+server:
+    servlet:
+        context-path: /
+    port: 8080
+    tomcat:
+        max-wait: 20000
+        max-active: 50
+        max-idle: 20
+        main-idle: 15
+
+spring:
+    output:
+        ansi:
+            enabled: always
+#Logging
+logging:
+    level:
+        com:
+            uol.compasso.yara: debug
+        org:
+            springframework:
+                web: debug
+            hibernate:
+                SQL: debug
+                TYPE: trace
+
+
+resource:
+    cliente-post: Método responsável por criar novos usuário.
+    cliente-get: Método responsável por exibir dos dados do usuário.
+    cliente-get-id: Método responsável por exibir dos dados do usuário via ID.
+    cliente-put: Método responsável por atualizar usuário.
+    cliente-patch: Método responsável por atualizar usuário.
+    cliente-delete: Método responsável por excluir usuário.
+    cliente-options: Método responsável para apresentar as operações disponível na API.
+
+
+    cidade-post: Método responsável por criar novos post.
+    cidade-get-id: Método responsável por exibir dos dados do usuário via ID.
+    cidade-get: Método responsável por exibir dos dados do post.
+    cidade-put: Método responsável por atualizar post específico.
+    cidade-patch: Método responsável por atualizar post específico.
+    cidade-delete: Método responsável por excluir post.
+    cidade-options: Método responsável para apresentar as operações disponível na API.
+
+
+
+
